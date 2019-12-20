@@ -1,0 +1,15 @@
+Segmenter Descriptions
+
+The first segmenter used was the NLTK Punkt segmenter. This is a segmenter based on a list of language abbreviation, collocations,
+and words that commonly start sentences. It is trained on a large dataset using an unsupervised learning algorithm.
+
+The second segmenter is a simple rule-based method. It checks whether a character is a sentence ending punctuation marker. If it is
+and the marker is followed by an uppercase letter then it segments the sentence.
+
+
+Results:
+
+Looking at the first 50 lines it seems that the upperCase segmenter is working better than the Punkt segmenter. The reason for this
+seems to be that the Punkt segmenter is splitting sentences into new lines when there is some or any kind of abbreviation.
+Although this could make sense since the segmenter is trained on English rather than Inupiak. But it still seems to be a problem
+when the abbreviations are the kind used in English such as "lb."

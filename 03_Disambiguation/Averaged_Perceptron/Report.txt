@@ -1,0 +1,6 @@
+The first thing I tried was decreasing the amount of features already in the tagger.
+However pretty quickly I saw that removing any of the features reduced the performance 
+of the  perception below its baseline performance of 96.04 on the french dataset.
+I expanded the context suffixes to both two words after and two words before. However,
+this reduce the performance. Instead I introduced a new feature which was the word without
+the suffix (which I called prefix). This increase performance by roughly 0.1%.

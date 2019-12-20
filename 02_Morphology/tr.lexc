@@ -1,0 +1,50 @@
+Multichar_Symbols
+
+    %{A%}       ! Vowel Harmony
+    %{E%}       ! Vowel Harmony
+    %{U%}       ! Vowel Harmony
+    %{Y%}       ! Vowel Ending
+    %{I%}       ! Possessive Vowel Ending
+    %{P%}       ! Possessive
+    %<n%>       ! Noun
+    %<pl%>      ! Plural
+    %<pos%>     ! Possessive
+    %<plurpos%> ! Possessive
+    %<ins%>     ! Instrumental
+    %>          ! Morpheme Boundary
+
+LEXICON Root
+
+Nouns ;
+
+LEXICON PLURAL
+
+                     POSSESSIVE ;
+    %<pl%>:%>l%{A%}r POSSESSIVE ;
+
+LEXICON N
+    
+    %<n%>: PLURAL ;
+
+LEXICON POSSESSIVE
+    
+                         # ; !CASES ;
+    %<pos%>:%>%{U%}%{P%} # ; !PLURPOSSESSIVE ;
+
+LEXICON PLURPOSSESSIVE
+    
+                        CASES ;
+    %<plurpos%>:%>%{I%}z CASES ;
+
+LEXICON CASES
+                        
+                          # ;
+    %<ins%>:%>%{Y%}l%{E%} # ;
+
+LEXICON Nouns
+
+    sokak:sokak N ;      ! "street"
+    bligi:bilgi N ;      ! "knowledge"
+    araba:araba N ;      ! "car"
+    telefon:telefon N;   ! "phone
+    içecek:içecek N;     ! "drink"
